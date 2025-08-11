@@ -10,7 +10,7 @@ To get a local copy of the project up and running:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/maris-kastenass/fasolutions-app.git
    cd fasolutions-app
    ```
 
