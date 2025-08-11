@@ -9,12 +9,14 @@ A React + TypeScript application using Apollo Client, Keycloak authentication, a
 To get a local copy of the project up and running:
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/maris-kastenass/fasolutions-app.git
    cd fasolutions-app
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
@@ -66,6 +68,7 @@ npm run eject  # Ejects from Create React App setup (irreversible)
 - Tests are located alongside components
 
 Run all tests:
+
 ```bash
 npm test
 ```
