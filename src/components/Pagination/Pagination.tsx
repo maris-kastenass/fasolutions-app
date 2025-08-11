@@ -26,7 +26,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
       >
         Prev
       </button>
-      <span className="pagination-info" aria-live="polite">
+      <span className="pagination-info ms-2 me-2" aria-live="polite">
         Page {currentPage} of {totalPages}
       </span>
       <button
