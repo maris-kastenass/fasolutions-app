@@ -1,0 +1,27 @@
+.entry-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.entry-pagination button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.entry-pagination button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.entry-pagination span {
+  font-weight: bold;
+}
+
+.pagination-info {
+  margin: 0 1rem;
+}

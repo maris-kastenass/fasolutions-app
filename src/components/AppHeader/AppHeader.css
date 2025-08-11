@@ -1,0 +1,18 @@
+.App-header {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  border-bottom: 1px solid #b2b2b2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left,
+.header-right {
+  width: 100px;
+}

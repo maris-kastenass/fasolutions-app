@@ -3,17 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import keycloak from './keycloak';
+import { ApolloProvider } from '@apollo/client';
+import createApolloClient from './apollo/apolloClient';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+keycloak
+  .init({ onLoad: 'login-required', checkLoginIframe: false })
+  .then((authenticated: boolean) => {
+    if (authenticated) {
+      const client = createApolloClient(keycloak);
+      const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+      root.render(
+        <React.StrictMode>
+          <ApolloProvider client={client}>
+            <App keycloak={keycloak} />
+          </ApolloProvider>
+          ,
+        </React.StrictMode>
+      );
+    } else {
+      keycloak.clearToken();
+      keycloak.logout();
+      sessionStorage.clear();
+    }
+  })
+  .catch((error: unknown) => {
+    if (error instanceof Error) {
+      console.error('Keycloak initialization error:', error.message);
+    } else {
+      console.error('Unknown error during Keycloak init', error);
+    }
+  });
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

@@ -1,0 +1,12 @@
+.contacts {
+  margin: 2em;
+  background-color: #f3f0f0;
+  max-width: 900px;
+}
+
+.list-titles,
+.list-group-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
