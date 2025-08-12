@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TransactionsTable from './TransactionsTable';
-import type { Transactions } from '../../types/transactions';
+import type { Transactions } from '../../../types/transactions';
 
 const mockTransactions: Transactions[] = [
   {

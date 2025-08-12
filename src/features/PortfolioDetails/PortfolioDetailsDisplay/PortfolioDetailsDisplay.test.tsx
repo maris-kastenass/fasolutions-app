@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import PortfolioDetailsDisplay from './PortfolioDetailsDisplay';
 import { ApolloError } from '@apollo/client';
 
-jest.mock('../PortfolioTransactions/PortfolioTransactions', () => (props: any) => (
+jest.mock('../../Transactions/PortfolioTransactions/PortfolioTransactions', () => (props: any) => (
   <div data-testid="portfolio-transactions">
     PortfolioTransactions - portfolioId: {props.portfolioId}
     <button onClick={() => props.setSelectedPortfolioId(null)}>Close Transactions</button>
@@ -17,7 +17,7 @@ jest.mock('../PortfolioDetailsContainer/PortfolioDetailsContainer', () => (props
   </div>
 ));
 
-jest.mock('../BackButton/BackButton', () => (props: any) => (
+jest.mock('../../../components/BackButton/BackButton', () => (props: any) => (
   <button onClick={props.onClick}>BackButton</button>
 ));
 

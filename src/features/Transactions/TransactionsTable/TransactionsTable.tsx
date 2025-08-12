@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './TransactionsTable.css';
 
-import type { Transactions } from '../../types/transactions';
+import type { Transactions } from '../../../types/transactions';
 import type { TransactionsTableProps } from './TransactionsTable.types';
 
 const TransactionsTable = ({ transactions }: TransactionsTableProps) => {

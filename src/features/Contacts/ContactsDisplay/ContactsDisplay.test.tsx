@@ -3,14 +3,17 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import ContactsDisplay from './ContactsDisplay';
 import { ApolloError } from '@apollo/client';
 
-jest.mock('../PortfolioDetailsLoader/PortfolioDetailsLoader', () => (props: any) => (
-  <div data-testid="portfolio-details-loader">
-    PortfolioDetailsLoader for {props.contact?.name}
-    <button onClick={() => props.setSelectedContact(null)}>Back</button>
-  </div>
-));
+jest.mock(
+  '../../PortfolioDetails/PortfolioDetailsLoader/PortfolioDetailsLoader',
+  () => (props: any) => (
+    <div data-testid="portfolio-details-loader">
+      PortfolioDetailsLoader for {props.contact?.name}
+      <button onClick={() => props.setSelectedContact(null)}>Back</button>
+    </div>
+  )
+);
 
-jest.mock('../Pagination/Pagination', () => (props: any) => (
+jest.mock('../../../components/Pagination/Pagination', () => (props: any) => (
   <div>
     Pagination current: {props.currentPage} total: {props.totalPages}
     <button onClick={() => props.onPageChange(props.currentPage + 1)}>Next</button>

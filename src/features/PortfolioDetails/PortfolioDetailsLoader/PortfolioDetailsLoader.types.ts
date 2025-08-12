@@ -1,4 +1,4 @@
-import type { Contact } from '../../types/contact';
+import type { Contact } from '../../../types/contact';
 
 export type PortfolioDetailsLoaderProps = {
   contact: Contact | null;

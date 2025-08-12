@@ -1,6 +1,6 @@
 import './App.css';
 import type { KeycloakInstance } from 'keycloak-js';
-import ContactsData from './components/ContactsData/ContactsData';
+import ContactsData from './features/Contacts/ContactsData/ContactsData';
 import AppHeader from './components/AppHeader/AppHeader';
 
 type AppProps = {

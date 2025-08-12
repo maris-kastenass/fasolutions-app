@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import PortfolioDetailsLoader from '../PortfolioDetailsLoader/PortfolioDetailsLoader';
-import Pagination from '../Pagination/Pagination';
+import PortfolioDetailsLoader from '../../PortfolioDetails/PortfolioDetailsLoader/PortfolioDetailsLoader';
+import Pagination from '../../../components/Pagination/Pagination';
 import './ContactsDisplay.css';
 
-import type { Contact } from '../../types/contact';
+import type { Contact } from '../../../types/contact';
 import type { ContactsDisplayProps } from './ContactsDisplay.types';
 
 const ITEMS_PER_PAGE = 20;

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useQuery } from '@apollo/client';
 import ContactsData from './ContactsData';
-import { GET_CONTACTS } from '../../graphql/getContacts';
+import { GET_CONTACTS } from '../../../graphql/getContacts';
 
 // Mock ContactsDisplay to easily inspect props
 jest.mock('../ContactsDisplay/ContactsDisplay', () => {

@@ -1,15 +1,15 @@
 import { useLazyQuery } from '@apollo/client';
 import { useEffect, useState } from 'react';
-import { GET_PORTFOLIO_TRANSACTIONS } from '../../graphql/getTransactions';
-import BackButton from '../BackButton/BackButton';
+import { GET_PORTFOLIO_TRANSACTIONS } from '../../../graphql/getTransactions';
+import BackButton from '../../../components/BackButton/BackButton';
 import TransactionsTable from '../TransactionsTable/TransactionsTable';
 import TransactionDateFilter from '../TransactionDateFilter/TransactionDateFilter';
-import Pagination from '../Pagination/Pagination';
+import Pagination from '../../../components/Pagination/Pagination';
 
 import type {
   GetPortfolioTransactionsResponse,
   GetPortfolioDetailsVariables,
-} from '../../types/transactions';
+} from '../../../types/transactions';
 import type { PortfolioTransactionsProps } from './PortfolioTransactions.types';
 
 const ITEMS_PER_PAGE = 20;

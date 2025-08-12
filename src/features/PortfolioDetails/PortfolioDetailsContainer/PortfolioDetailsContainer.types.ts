@@ -1,4 +1,4 @@
-import type { PortfolioDetails } from '../../types/portfolioDetails';
+import type { PortfolioDetails } from '../../../types/portfolioDetails';
 
 export type PortfolioDetailsContainerProps = {
   portfolioDetails: PortfolioDetails[];

@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_PORTFOLIO_DETAILS } from '../../graphql/getPortfolio';
+import { GET_PORTFOLIO_DETAILS } from '../../../graphql/getPortfolio';
 import PortfolioDetailsDisplay from '../PortfolioDetailsDisplay/PortfolioDetailsDisplay';
 
 import type { PortfolioDetailsLoaderProps } from './PortfolioDetailsLoader.types';
 import type {
   GetPortfolioDetailsResponse,
   GetPortfolioDetailsVars,
-} from '../../types/portfolioDetails';
+} from '../../../types/portfolioDetails';
 
 const PortfolioDetailsLoader = ({ contact, setSelectedContact }: PortfolioDetailsLoaderProps) => {
   useEffect(() => {

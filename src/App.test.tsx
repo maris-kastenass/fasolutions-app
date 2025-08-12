@@ -9,7 +9,9 @@ jest.mock('./components/AppHeader/AppHeader', () => (props: any) => (
     <button onClick={props.logout}>Logout</button>
   </div>
 ));
-jest.mock('./components/ContactsData/ContactsData', () => () => <div>ContactsData Component</div>);
+jest.mock('./features/Contacts/ContactsData/ContactsData', () => () => (
+  <div>ContactsData Component</div>
+));
 
 describe('App', () => {
   it('renders title and ContactsData, and calls logout on button click', () => {

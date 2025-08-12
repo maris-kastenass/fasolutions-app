@@ -1,4 +1,4 @@
-import type { Contact } from '../../types/contact';
+import type { Contact } from '../../../types/contact';
 import { ApolloError } from '@apollo/client';
 
 export type ContactsDisplayProps = {

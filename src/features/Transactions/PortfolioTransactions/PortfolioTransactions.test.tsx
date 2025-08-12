@@ -4,7 +4,7 @@ import { useLazyQuery } from '@apollo/client';
 import PortfolioTransactions from './PortfolioTransactions';
 
 // Mock child components
-jest.mock('../BackButton/BackButton', () => (props: any) => (
+jest.mock('../../../components/BackButton/BackButton', () => (props: any) => (
   <button onClick={props.onClick}>BackButton</button>
 ));
 jest.mock('../TransactionDateFilter/TransactionDateFilter', () => (props: any) => (
@@ -13,7 +13,7 @@ jest.mock('../TransactionDateFilter/TransactionDateFilter', () => (props: any) =
 jest.mock('../TransactionsTable/TransactionsTable', () => (props: any) => (
   <div>TransactionsTable with {props.transactions.length} items</div>
 ));
-jest.mock('../Pagination/Pagination', () => (props: any) => (
+jest.mock('../../../components/Pagination/Pagination', () => (props: any) => (
   <div>
     Pagination current: {props.currentPage} total: {props.totalPages}
     <button onClick={() => props.onPageChange(props.currentPage + 1)}>Next</button>

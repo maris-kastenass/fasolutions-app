@@ -1,8 +1,8 @@
 import './PortfolioDetailsDisplay.css';
 import { useState } from 'react';
-import PortfolioTransactions from '../PortfolioTransactions/PortfolioTransactions';
+import PortfolioTransactions from '../../Transactions/PortfolioTransactions/PortfolioTransactions';
 import PortfolioDetailsContainer from '../PortfolioDetailsContainer/PortfolioDetailsContainer';
-import BackButton from '../BackButton/BackButton';
+import BackButton from '../../../components/BackButton/BackButton';
 
 import type { PortfolioDetailsDisplayProps } from './PortfolioDetailsDisplay.types';
 

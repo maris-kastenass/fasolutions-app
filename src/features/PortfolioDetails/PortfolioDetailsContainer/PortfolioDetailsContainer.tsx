@@ -1,6 +1,6 @@
 import './PortfolioDetailsContainer.css';
 
-import type { PortfolioDetails } from '../../types/portfolioDetails';
+import type { PortfolioDetails } from '../../../types/portfolioDetails';
 import type { PortfolioDetailsContainerProps } from './PortfolioDetailsContainer.types';
 
 const PortfolioDetailsContainer = ({
