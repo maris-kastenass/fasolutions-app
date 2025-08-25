@@ -19,7 +19,6 @@ keycloak
           <ApolloProvider client={client}>
             <App keycloak={keycloak} />
           </ApolloProvider>
-          ,
         </React.StrictMode>
       );
     } else {
